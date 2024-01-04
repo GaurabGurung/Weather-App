@@ -21,8 +21,8 @@ const WeatherData = () => {
     } else {
       location[0].innerHTML = weatherData.name;
       humidity[0].innerHTML = weatherData.main.humidity + " %";
-      wind[0].innerHTML = weatherData.wind.speed + " km/h";
-      temperature[0].innerHTML = weatherData.main.temp + " °c";
+      wind[0].innerHTML = Math.floor(weatherData.wind.speed) + " km/h";
+      temperature[0].innerHTML = Math.floor(weatherData.main.temp) + " °c";
     }
   }, [weatherData]);
 
